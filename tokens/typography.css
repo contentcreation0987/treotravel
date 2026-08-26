@@ -1,0 +1,46 @@
+:root{
+--font-display:"Anton","Arial Narrow",Impact,sans-serif;
+--font-body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+--font-script:"Caveat","Segoe Script",cursive;
+--font-num:"Montserrat",system-ui,sans-serif;
+
+--fs-100:11px;--fs-200:12px;--fs-300:13px;--fs-400:15px;--fs-500:17px;--fs-600:20px;--fs-700:24px;--fs-800:30px;--fs-900:38px;--fs-1000:48px;--fs-1100:64px;--fs-1200:84px;
+/* Fluid display steps — mobile-first, cap at desktop */
+--fs-hero:clamp(38px,11.5vw,84px); /* @kind font */
+--fs-hero-sub:clamp(20px,5.5vw,34px); /* @kind font */
+--fs-section:clamp(26px,7vw,44px); /* @kind font */
+--fs-card-title:clamp(20px,5vw,26px); /* @kind font */
+
+--lh-flush:0.88; /* @kind font */
+--lh-tight:0.96; /* @kind font */
+--lh-snug:1.18; /* @kind font */
+--lh-body:1.55; /* @kind font */
+--lh-loose:1.7; /* @kind font */
+--ls-display:-0.015em; /* @kind font */
+--ls-display-tight:-0.03em; /* @kind font */
+--ls-tight:-0.01em; /* @kind font */
+--ls-normal:0; /* @kind font */
+--ls-wide:0.06em; /* @kind font */
+--ls-label:0.14em; /* @kind font */
+--ls-eyebrow:0.2em; /* @kind font */
+
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-black:800; /* @kind font */
+
+/* ── Roles ─────────────────────────────────────────────────────────── */
+--type-hero:var(--fw-regular) var(--fs-hero)/var(--lh-flush) var(--font-display); /* @kind font */
+--type-section:var(--fw-regular) var(--fs-section)/var(--lh-tight) var(--font-display); /* @kind font */
+--type-card-title:var(--fw-regular) var(--fs-card-title)/var(--lh-tight) var(--font-display); /* @kind font */
+--type-eyebrow:var(--fw-bold) var(--fs-200)/1.2 var(--font-body); /* @kind font */
+--type-body:var(--fw-regular) var(--fs-400)/var(--lh-body) var(--font-body); /* @kind font */
+--type-body-lg:var(--fw-regular) var(--fs-500)/var(--lh-body) var(--font-body); /* @kind font */
+--type-label:var(--fw-bold) var(--fs-200)/1.2 var(--font-body); /* @kind font */
+--type-price:var(--fw-bold) var(--fs-700)/1 var(--font-num); /* @kind font */
+--type-price-sm:var(--fw-bold) var(--fs-500)/1 var(--font-num); /* @kind font */
+--type-script:var(--fw-semibold) var(--fs-600)/1.15 var(--font-script); /* @kind font */
+--num-tabular:tabular-nums lining-nums; /* @kind other */
+}

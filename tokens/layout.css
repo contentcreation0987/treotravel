@@ -1,0 +1,30 @@
+:root{
+--page-max:1180px; /* @kind spacing */
+--content-max:660px; /* @kind spacing */
+--board-max:960px; /* @kind spacing */
+--page-pad:20px; /* @kind spacing */
+--page-pad-md:32px; /* @kind spacing */
+--page-pad-lg:48px; /* @kind spacing */
+--page-pad-xl:64px; /* @kind spacing */
+--header-h:72px; /* @kind spacing */
+--sticky-cta-h:64px; /* @kind spacing */
+--mobile-design-w:390px; /* @kind spacing */
+--breakpoint-sm:480px; /* @kind other */
+--breakpoint-md:768px; /* @kind other */
+--breakpoint-lg:1024px; /* @kind other */
+--breakpoint-xl:1440px; /* @kind other */
+--breakpoint-2xl:1800px; /* @kind other */
+--ratio-hero:4/5; /* @kind other */
+--ratio-card:16/10; /* @kind other */
+--ratio-row-photo:4/3; /* @kind other */
+--ratio-thumb:1/1; /* @kind other */
+--z-base:0; /* @kind other */
+--z-raised:10; /* @kind other */
+--z-sticky:100; /* @kind other */
+--z-header:200; /* @kind other */
+--z-overlay:300; /* @kind other */
+}
+/* Wide screens: the page grows with the viewport instead of stranding content
+   in a 1180px column. Mobile-first, but responsive at the top end too. */
+@media (min-width:1440px){:root{--page-max:1360px;--board-max:1120px;--page-pad:var(--page-pad-xl)}}
+@media (min-width:1800px){:root{--page-max:1560px;--board-max:1200px}}

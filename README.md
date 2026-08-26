@@ -1,44 +1,50 @@
-# UI kit — Treo Travels marketing website
+# Deploying to Vercel
 
-Mobile-first lead-generation site. Four click-through screens in one shell.
+The project is **static HTML** — no build step, no framework, no npm install.
 
-| File | What it is |
+## Fastest path
+
+1. Push this whole folder to a GitHub repo.
+2. In Vercel: **Add New → Project → import the repo**.
+3. Framework preset: **Other**. Build command: **leave empty**. Output
+   directory: **leave empty** (repo root).
+4. Deploy.
+
+`index.html` at the root forwards to `ui_kits/website/index.html`, which is the
+site. Everything it needs — `styles.css`, `tokens/`, `assets/`, `_ds_bundle.js`
+— sits alongside it and is served as-is.
+
+## Before you go live
+
+This is a **design prototype**, not production code. Three things to fix first:
+
+1. **Babel runs in the browser.** `ui_kits/website/*.jsx` is transpiled by
+   `@babel/standalone` on every page load — fine for review, too slow for real
+   traffic on a 3G phone. For production, precompile the JSX (Vite, esbuild, or
+   any bundler) and ship plain JS. Your hard rule is "anything over 3s loses the
+   user"; browser Babel alone costs about that.
+2. **Replace the placeholder data.** `ui_kits/website/data.js` holds every
+   price, date, seat count and phone number. `phone: '+92 300 1234567'` is a
+   placeholder — put the real WhatsApp number in before anyone sees this.
+3. **Compress the images.** `assets/photos/*.png` are PNG crops from
+   screenshots. Convert to WebP at ~75% quality and they will drop by roughly
+   80%. Replace them entirely once Treo sends originals.
+
+## Custom domain
+
+Vercel → Project → Settings → Domains → add `treotravels.com` (or whichever),
+then point the DNS records Vercel shows you. HTTPS is automatic.
+
+## What each folder is
+
+| Folder | Ships to production? |
 |---|---|
-| `index.html` | Mobile card (430px). Open it and click through. Design width 390px; breakpoints at 560 / 768 / 1024. |
-| `desktop.html` | Desktop card (1440px). Same app, same files — only the declared card viewport differs, so the layout responds naturally. |
-| `App.jsx` | Shell — sticky header, screen switch, footer, sticky WhatsApp bar. |
-| `LandingHero.jsx` | Hero: ken-burns photo, headline, CTAs, proof counters, and the departure board (side-by-side on desktop). |
-| `LandingScreen.jsx` | Landing page: hero → how booking works → next departures → what's included → photo band → reviews → FAQ → closing CTA + form. |
-| `DeparturesScreen.jsx` | Departure calendar. **Upcoming dates only** by default, grouped by month, with air / road / weekend / seats-available filters; past dates sit behind a collapsed "already departed" disclosure, dimmed and labelled `Departed`. |
-| `PrivateTourScreen.jsx` | Private-tour builder — destination, group size, dates, vehicle, hotel tier, occasion — with a live brief summary and an itemised WhatsApp hand-off. |
-| `ToursScreen.jsx` | All tours as alternating photo-left / info-right rows, with type filter. |
-| `TourDetailScreen.jsx` | Hero + price, trust strip, day-by-day itinerary, equal-weight inclusions/exclusions, reviews from that trip, deposit & cancellation terms, related trips. |
-| `ServicesScreen.jsx` | Umrah, air ticketing, visa services, private tours + the trust/about block. |
-| `data.js` | All copy and trip data as `window.TREO`. Content is drawn from their real Instagram posts. |
+| `ui_kits/website/` | **Yes** — this is the site |
+| `styles.css`, `tokens/` | **Yes** — the CSS the site links |
+| `assets/` | **Yes** — logos, icons, photos |
+| `_ds_bundle.js` | **Yes** — the compiled component library |
+| `components/` | No — source for the bundle |
+| `guidelines/`, `templates/`, `uploads/` | No — design documentation |
 
-## What it demonstrates
-
-- **The signature hero.** The departure board is the first thing on the page and
-  the only bold element above the fold.
-- **Price above the fold on every screen** — hero board, card grid, detail hero,
-  and the sticky bar that follows you down every page.
-- **WhatsApp as the only conversion.** Every CTA is a `wa.me` deep link with a
-  pre-filled, trip-specific message. There is no cart, no checkout, no
-  "Book Now" anywhere.
-- **Inclusions and exclusions at identical weight** on the detail screen.
-- **Dark → light section rhythm**: ink hero, ink cards, `#EEF2F3` for the
-  itinerary and price detail, ink again for related trips.
-
-## Responsive contract
-
-The kit sets layout via CSS custom properties on `body`, so components stay
-breakpoint-free: `--cards-3`, `--cards-2`, `--split`, `--row-cols`,
-`--hero-ratio`, `--inclusions-cols`, `--form-cols`,
-`--footer-cols`, and `--nav-display` / `--menu-display` for the header swap.
-`TrustStrip` needs no variable — it reflows with `auto-fit`.
-
-## Deliberately not built
-
-Blog / SEO landing pages, the gallery, and the payment-instalment explainer —
-no source material existed for them. Air-ticket and visa detail pages are
-represented by their cards on the services screen only.
+Leaving the extra folders in the repo is harmless (they are just files), but you
+can delete `uploads/` before pushing — it holds the original screenshots.

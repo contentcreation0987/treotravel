@@ -1,0 +1,40 @@
+:root{
+/* ── Ink: near-black. Grounds everything. ───────────────────────────── */
+--ink-1000:#0C0F12;--ink-900:#12161A;--ink-800:#1A1F24;--ink-700:#232A30;--ink-600:#2E363D;--ink-500:#3C464E;--ink-400:#55626B;
+/* ── Teal: the brand. From the logo. Nav, badges, markers, trust. ───── */
+--teal-900:#083E3E;--teal-800:#0A5F5E;--teal-700:#0E7C7B;--teal-600:#12938F;--teal-500:#19B0AA;--teal-400:#35C4BF;--teal-300:#6FD3D1;--teal-100:#D7EDEC;--teal-050:#EBF6F6;
+/* ── Gold: PRICE AND DEADLINES ONLY. Never decoration. ──────────────── */
+--gold-600:#C9A800;--gold-500:#E0BA00;--gold-400:#FFD400;--gold-200:#FFE873;
+/* ── Light: the reading surfaces. Itineraries, price tables. ────────── */
+--paper-000:#FFFFFF;--paper-100:#F7FAFA;--paper-200:#EEF2F3;--paper-300:#E1E8EA;--paper-400:#CFD9DC;--paper-500:#AEBBC0;--paper-600:#7C8B92;
+/* ── Logo-only greens. Reproduce the mark; never a UI colour. ───────── */
+--logo-pine:#35A34A;--logo-ridge:#3A2A22;
+/* ── Legacy social accent. Instagram artwork only, never on web. ───── */
+--legacy-lime:#C6EE6E;
+
+/* ═══ Semantic ═══ */
+--surface-base:var(--ink-800);--surface-deep:var(--ink-900);--surface-raised:var(--ink-700);--surface-raised-2:var(--ink-600);
+--surface-light:var(--paper-200);--surface-light-alt:var(--paper-100);--surface-card-light:var(--paper-000);
+--surface-brand:var(--teal-700);--surface-brand-deep:var(--teal-800);--surface-brand-tint:var(--teal-050);
+--text-primary:#FFFFFF;--text-secondary:rgba(255,255,255,.74);--text-muted:rgba(255,255,255,.52);--text-faint:rgba(255,255,255,.34);
+--text-on-light:var(--ink-800);--text-on-light-secondary:#4C585F;--text-on-light-muted:var(--paper-600);
+--text-brand:var(--teal-400);--text-brand-on-light:var(--teal-700);
+--text-price:var(--gold-400);--text-deadline:var(--gold-400);
+--border-dark:rgba(255,255,255,.12);--border-dark-strong:rgba(255,255,255,.24);
+--border-light:var(--paper-300);--border-light-strong:var(--paper-400);
+--border-brand:var(--teal-700);
+--marker-section:var(--teal-700);
+--state-included:var(--teal-500);--state-included-on-light:var(--teal-700);
+--state-excluded:var(--paper-500);--state-excluded-on-light:var(--paper-600);
+--state-seats-low:var(--gold-400);--state-seats-out:var(--ink-500);
+--whatsapp:#25D366;--whatsapp-deep:#128C7E;
+--focus-ring:var(--teal-400);
+
+/* ── Scrims. Every headline sits on one. ────────────────────────────── */
+--scrim-bottom:linear-gradient(180deg,rgba(18,22,26,0) 0%,rgba(18,22,26,.08) 30%,rgba(18,22,26,.72) 72%,rgba(18,22,26,.96) 100%); /* @kind color */
+--scrim-bottom-hard:linear-gradient(180deg,rgba(18,22,26,0) 0%,rgba(18,22,26,.55) 48%,#12161A 100%); /* @kind color */
+--scrim-top:linear-gradient(180deg,rgba(18,22,26,.85) 0%,rgba(18,22,26,.35) 45%,rgba(18,22,26,0) 100%); /* @kind color */
+--scrim-full:linear-gradient(180deg,rgba(18,22,26,.78) 0%,rgba(18,22,26,.42) 40%,rgba(18,22,26,.88) 100%); /* @kind color */
+--scrim-left:linear-gradient(90deg,rgba(18,22,26,.92) 0%,rgba(18,22,26,.55) 55%,rgba(18,22,26,.15) 100%); /* @kind color */
+--scrim-flat:rgba(18,22,26,.55); /* @kind color */
+}

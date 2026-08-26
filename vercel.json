@@ -1,0 +1,29 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/ui_kits/website/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).babel.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).jsx",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}

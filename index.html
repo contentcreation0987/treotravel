@@ -1,37 +1,10 @@
-<!-- @dsCard group="Website" viewport="430x900" name="Marketing website — mobile" subtitle="Departure-board hero, tours, tour detail, services. Click through it." -->
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Treo Travels — fixed-departure tours from Karachi</title>
-<link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../_ds_bundle.js"></script>
-<script src="data.js"></script>
-<style>
-body{background:var(--surface-base);--cards-3:1fr;--cards-2:1fr;--split:1fr;--hero-cols:1fr;--faq-cols:1fr;--band-ratio:4/5;--hero-ratio:4/5;--inclusions-cols:1fr;--form-cols:1fr;--footer-cols:1fr}
-@media(min-width:560px){body{--cards-2:1fr 1fr;--form-cols:1fr 1fr;--inclusions-cols:1fr 1fr;--terms-cols:1fr 1fr;--band-ratio:16/9}}
-@media(min-width:768px){body{--cards-3:repeat(3,1fr);--split:1fr 1fr;--row-cols:5fr 6fr;--hero-ratio:16/9;--hero-cols:1.05fr .95fr;--footer-cols:1.5fr 1fr 1fr 1fr 1.1fr;--nav-display:flex;--menu-display:none;--page-pad:var(--page-pad-md);--section-y:var(--section-y-lg);--faq-cols:5fr 7fr;--faq-sticky:sticky;--band-ratio:21/9;--policy-cols:1fr 1fr}}
-@media(min-width:1024px){body{--page-pad:var(--page-pad-lg)}}
-@media(min-width:1440px){body{--cards-3:repeat(3,1fr);--hero-cols:1.1fr .9fr;--page-pad:var(--page-pad-xl)}}
-@media(min-width:1800px){body{--cards-3:repeat(4,1fr)}}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
-.kb{animation:kb 26s var(--ease-in-out) infinite alternate}
-@media(prefers-reduced-motion:reduce){.kb{animation:none}}
-</style>
-</head><body><div id="root"></div>
-<script type="text/babel" src="LandingHero.jsx"></script>
-<script type="text/babel" src="LandingScreen.jsx"></script>
-<script type="text/babel" src="DeparturesScreen.jsx"></script>
-<script type="text/babel" src="PrivateTourScreen.jsx"></script>
-<script type="text/babel" src="ToursScreen.jsx"></script>
-<script type="text/babel" src="TourDetailScreen.jsx"></script>
-<script type="text/babel" src="ServicesScreen.jsx"></script>
-<script type="text/babel" src="App.jsx"></script>
-<script type="text/babel" data-presets="react">
-const mount = () => {
-  if (!window.App || !window.LandingScreen || !window.LandingHero || !window.DeparturesScreen || !window.PrivateTourScreen) return setTimeout(mount, 40);
-  ReactDOM.createRoot(document.getElementById('root')).render(<window.App />);
-};
-mount();
-</script>
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Treo Travels</title>
+<meta http-equiv="refresh" content="0; url=./ui_kits/website/index.html">
+<link rel="canonical" href="./ui_kits/website/index.html">
+<link rel="stylesheet" href="styles.css">
+<style>body{display:grid;place-items:center;min-height:100vh;margin:0;background:var(--surface-base,#1A1F24)}a{font:var(--type-body);color:var(--teal-400,#35C4BF)}</style>
+</head><body>
+<a href="./ui_kits/website/index.html">Opening Treo Travels…</a>
+<script>location.replace('./ui_kits/website/index.html');</script>
 </body></html>
